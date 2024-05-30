@@ -369,13 +369,15 @@ public class CheckersBoard {
     public String checkWinner(){
         if(whitePieceCount == 0){
             checkersBoard.setVisible(false);
+            playerTwoWin.setText("Player Two Won the Game");
             playerTwoWin.setVisible(true);
             return "White wins";
 
         }
         if(blackPieceCount == 0){
             checkersBoard.setVisible(false);
-            playerOneWin.setVisible(true);
+            playerTwoWin.setText("Player One Won the Game");
+            playerTwoWin.setVisible(true);
             return "Black wins";
         }
         else{
